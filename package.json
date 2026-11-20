@@ -1,0 +1,90 @@
+{
+  "name": "makine-ikmal-hakedis",
+  "productName": "Makine İkmal Hakediş",
+  "version": "1.9.0",
+  "description": "Makine İkmal Araç/Sürücü Puantaj ve Hakediş Uygulaması",
+  "main": "dist-electron/main.cjs",
+  "private": true,
+  "scripts": {
+    "build:main": "node scripts/build-main.mjs",
+    "build:renderer": "vite build",
+    "build": "npm run build:main && npm run build:renderer",
+    "start": "npm run build && electron .",
+    "dev": "node scripts/dev.mjs",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "dist": "npm run build && electron-builder --win dir --x64",
+    "hazir-veri": "node scripts/hazir-veri.mjs"
+  },
+  "build": {
+    "appId": "local.makineikmal.hakedis",
+    "productName": "Makine Ikmal Hakedis",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**",
+      "dist-electron/**",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "templates",
+        "to": "templates",
+        "filter": [
+          "layout.json"
+        ]
+      },
+      {
+        "from": "build/icon.png",
+        "to": "build/icon.png"
+      },
+      {
+        "from": "hazir-veri",
+        "to": "hazir-veri",
+        "filter": [
+          "hakedis.db"
+        ]
+      }
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "dir",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "build/icon.ico"
+    },
+    "asar": true,
+    "compression": "maximum",
+    "npmRebuild": false,
+    "nodeGypRebuild": false,
+    "buildDependenciesFromSource": false
+  },
+  "devDependencies": {
+    "@fontsource-variable/outfit": "^5.3.0",
+    "@types/node": "^22.10.5",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@types/sql.js": "^1.4.9",
+    "electron": "^33.3.1",
+    "electron-builder": "^25.1.8",
+    "esbuild": "^0.24.2",
+    "exceljs": "^4.4.0",
+    "lucide-react": "^0.460.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sql.js": "^1.13.0",
+    "typescript": "^5.7.3",
+    "vite": "^6.0.7",
+    "vitest": "^2.1.8"
+  },
+  "allowScripts": {
+    "electron@33.3.1": true,
+    "esbuild@0.24.2": true,
+    "esbuild@0.21.5": true
+  }
+}

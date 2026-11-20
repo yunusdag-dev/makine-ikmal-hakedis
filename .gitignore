@@ -1,0 +1,22 @@
+node_modules/
+dist/
+dist-electron/
+release/
+*.db
+*.db.*
+*.lock
+veri/
+yedekler/
+# Gerçek kişi adları içeren örnek dosyalar repoya girmez
+örnek exceller/
+ornek-exceller/
+*.xlsx
+!templates/*.xlsx
+.vite/
+coverage/
+
+# Kurulum paketine konan hazır veri (gerçek kişi adları içerir)
+hazir-veri/
+
+# Kuruma götürülecek paket (kurulum programı)
+KURUMA-GOTUR/

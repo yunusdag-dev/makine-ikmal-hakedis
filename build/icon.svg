@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1e40af"/><stop offset="1" stop-color="#0b1e4a"/></linearGradient>
+ <linearGradient id="gr" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2dd4bf"/><stop offset="1" stop-color="#0d9488"/></linearGradient>
+ <linearGradient id="tr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#cbd5e1"/></linearGradient>
+</defs>
+<rect width="512" height="512" rx="112" fill="url(#bg)"/>
+<path d="M442.0 190.0 L477.4 203.0 L474.2 223.2 L436.5 224.6 L420.6 255.8 L441.6 287.2 L427.2 301.6 L395.8 280.6 L364.6 296.5 L363.2 334.2 L343.0 337.4 L330.0 302.0 L295.4 296.5 L272.1 326.2 L253.9 316.9 L264.2 280.6 L239.4 255.8 L203.1 266.1 L193.8 247.9 L223.5 224.6 L218.0 190.0 L182.6 177.0 L185.8 156.8 L223.5 155.4 L239.4 124.2 L218.4 92.8 L232.8 78.4 L264.2 99.4 L295.4 83.5 L296.8 45.8 L317.0 42.6 L330.0 78.0 L364.6 83.5 L387.9 53.8 L406.1 63.1 L395.8 99.4 L420.6 124.2 L456.9 113.9 L466.2 132.1 L436.5 155.4 Z M380 190 A50 50 0 1 0 280 190 A50 50 0 1 0 380 190 Z" fill="url(#gr)" fill-rule="evenodd"/>
+<circle cx="330" cy="190" r="26" fill="#0b1e4a" opacity=".35"/>
+<rect x="64" y="262" width="222" height="124" rx="16" fill="url(#tr)"/>
+<path d="M298 296 h74 q14 0 24 10 l34 40 q8 10 8 22 v18 h-140 z" fill="url(#tr)"/>
+<path d="M318 312 h50 q6 0 10 4 l22 26 h-82 z" fill="#1e40af"/>
+<rect x="64" y="378" width="378" height="14" rx="7" fill="#e2e8f0"/>
+<g><circle cx="150" cy="394" r="40" fill="#0b1e4a"/><circle cx="150" cy="394" r="30" fill="#f1f5f9"/><circle cx="150" cy="394" r="12" fill="#0b1e4a"/></g>
+<g><circle cx="374" cy="394" r="40" fill="#0b1e4a"/><circle cx="374" cy="394" r="30" fill="#f1f5f9"/><circle cx="374" cy="394" r="12" fill="#0b1e4a"/></g>
+</svg>
