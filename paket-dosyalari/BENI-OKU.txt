@@ -1,0 +1,32 @@
+MAKINE IKMAL HAKEDIS (surum SURUM) - KURULUM
+
+HIZLI KURULUM (onerilen)
+1) Bu klasoru bilgisayara kopyalayin (flash bellekten), icindeki "kur.bat" dosyasina cift tiklayin.
+   - Program C:\Hakedis klasorune kopyalanir (varsa uzerine yazilir), masaustune kisayol olusturulur.
+   - Yonetici izni gerekmez. Bitince "Kurulum tamam" yazar.
+2) Ortak veri klasoru: kur.bat veri yolunu sorar (ornek \sunucu\ortak\hakedis\veri). Yolu
+   yapilandirma.json dosyasina onceden yazarsaniz sormaz. Bos birakirsaniz veri bu bilgisayarda
+   C:\Hakedis\veri klasorunde tutulur (yalniz tek bilgisayar icin).
+3) Masaustundeki kisayoldan uygulamayi acin. Ilk acilista:
+   - Araclar, soforler ve parametreler hazir gelir.
+   - Ilk yonetici hesabi olusturulur; ekranda gorunen KURTARMA KODUNU bir yere yazin.
+   - Digerleri icin diger bilgisayarlarda ayni kur.bat'i calistirmaniz yeterli (ayni veri yolu).
+
+NOT: Uygulamanin kendisi her bilgisayarda yerel diskten (C:\Hakedis) calisir; yalniz VERI ortak ag klasorundedir.
+Uygulamayi dogrudan ag klasorunden calistirmayin (Windows engelleyebilir).
+
+VERI KLASORU
+- yapilandirma.json icindeki "veriYolu" varsayilan veri klasorudur. Bir bilgisayarda Ayarlar > Veri klasoru
+  ile degistirilirse, o bilgisayardaki secim onceliklidir. Yol erisilemezse acilista klasor sectirilir;
+  klasor yoksa yalnizca siz onaylarsaniz olusturulur.
+- Veritabani "hakedis.db"; yedekler "yedekler" (her gun ilk acilista, son 14 gun), hata gunlugu "loglar" altindadir.
+- KLASOR IZINLERI: veri klasorune yalnizca uygulamayi kullananlar yazabilsin.
+
+ONEMLI
+- Roller: YONETICI her seyi yapar. KULLANICI gunluk girisleri yapar. IZLEYICI yalniz gorur.
+- Yeni yil zammi / odeme kalemi kapatma: Ayarlar > Parametreler > "Hizli Ayar" (yonetici).
+- Vergi dilimleri: Ayarlar > Parametreler > "Kumulatif Vergi Kesintisi" (yonetici).
+- T.C. kimlik no gizli gosterilir; surucu kartindaki "Goster" dugmesiyle acilir (her acilis kayda yazilir).
+- GUNCELLEME: yeni surumu ayni sekilde kur.bat ile kurun; veriye dokunulmaz, gerekirse once yedek alinip
+  otomatik yukseltilir. Eski surumlu uygulama, yeni veritabanini acmaz ve uyari verir.
+- Sorun olursa veri klasorundeki "loglar" altindaki hata dosyasini yoneticiye iletin.
